@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Your Events & Grow Organically | Social Media Growth Expert</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --fire-orange: #FF6B35;
+            --sun-gold: #FFB627;
+            --river-teal: #00838F;
+            --warm-cream: #FFF8E7;
+            --charcoal: #1A1A1A;
+            --soft-white: #FEFEFE;
+            --coral-pink: #FF8C69;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--charcoal);
+            background: var(--warm-cream);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Animated background gradient */
+        .bg-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(ellipse at top right, #FFE8CC 0%, var(--warm-cream) 50%, #FFF3D6 100%);
+            animation: bgPulse 20s ease-in-out infinite;
+        }
+
+        @keyframes bgPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
+        }
+
+        /* Decorative organic blobs */
+        .blob {
+            position: absolute;
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            opacity: 0.08;
+            filter: blur(40px);
+            animation: morphBlob 25s ease-in-out infinite;
+        }
+
+        .blob-1 {
+            width: 500px;
+            height: 500px;
+            background: var(--fire-orange);
+            top: -150px;
+            right: -100px;
+            animation-delay: 0s;
+        }
+
+        .blob-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--river-teal);
+            bottom: -100px;
+            left: -80px;
+            animation-delay: 8s;
+        }
+
+        .blob-3 {
+            width: 350px;
+            height: 350px;
+            background: var(--sun-gold);
+            top: 40%;
+            right: 5%;
+            animation-delay: 15s;
+        }
+
+        @keyframes morphBlob {
+            0%, 100% {
+                border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+                transform: translate(30px, -30px) rotate(90deg);
+            }
+            50% {
+                border-radius: 30% 70% 50% 50% / 50% 60% 40% 60%;
+                transform: translate(-30px, 30px) rotate(180deg);
+            }
+            75% {
+                border-radius: 70% 30% 60% 40% / 40% 70% 50% 60%;
+                transform: translate(20px, 20px) rotate(270deg);
+            }
+        }
+
+        /* Header */
+        header {
+            padding: 2rem 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 100;
+            animation: slideDown 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            font-style: italic;
+            color: var(--charcoal);
+            letter-spacing: -0.5px;
+            position: relative;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 60%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--fire-orange), var(--sun-gold));
+            border-radius: 2px;
+        }
+
+        .cta-btn {
+            padding: 1rem 2.2rem;
+            background: var(--fire-orange);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.25);
+            transform: translate(-50%, -50%);
+            transition: width 0.5s, height 0.5s;
+        }
+
+        .cta-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+            padding: 0 6%;
+            position: relative;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.6rem 1.4rem;
+            background: linear-gradient(135deg, var(--river-teal), #00A9BB);
+            color: white;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2rem;
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(0, 131, 143, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(0, 131, 143, 0.6);
+            }
+        }
+
+        .badge-icon {
+            font-size: 1.2rem;
+        }
+
+        h1 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(3rem, 7vw, 6.5rem);
+            line-height: 1.05;
+            color: var(--charcoal);
+            margin-bottom: 1.8rem;
+            font-weight: 900;
+            letter-spacing: -3px;
+        }
+
+        .highlight {
+            color: var(--fire-orange);
+            font-style: italic;
+            position: relative;
+            display: inline-block;
+        }
+
+        .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0.08em;
+            left: -0.05em;
+            right: -0.05em;
+            height: 0.18em;
+            background: var(--sun-gold);
+            opacity: 0.4;
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin: left;
+            animation: underlineGrow 1s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards;
+        }
+
+        @keyframes underlineGrow {
+            to { transform: scaleX(1); }
+        }
+
+        .subheading {
+            font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+            color: #4A4A4A;
+            margin-bottom: 3rem;
+            line-height: 1.75;
+            font-weight: 500;
+            max-width: 650px;
+        }
+
+        .subheading strong {
+            color: var(--charcoal);
+            font-weight: 700;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .cta-primary {
+            padding: 1.3rem 3rem;
+            font-size: 1.15rem;
+        }
+
+        .cta-secondary {
+            padding: 1.3rem 3rem;
+            background: transparent;
+            color: var(--charcoal);
+            border: 2.5px solid var(--charcoal);
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: none;
+        }
+
+        .cta-secondary:hover {
+            background: var(--charcoal);
+            color: white;
+            box-shadow: 0 8px 30px rgba(26, 26, 26, 0.3);
+        }
+
+        /* Hero Stats Card */
+        .hero-visual {
+            position: relative;
+            animation: fadeInRight 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .results-card {
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: 0 25px 80px rgba(255, 107, 53, 0.15);
+            position: relative;
+            border: 3px solid rgba(255, 107, 53, 0.15);
+            transform: rotate(-2deg);
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .results-card:hover {
+            transform: rotate(0deg) translateY(-10px);
+        }
+
+        .results-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, var(--fire-orange), var(--sun-gold), var(--river-teal));
+            border-radius: 25px 25px 0 0;
+        }
+
+        .stat-block {
+            margin-bottom: 2.5rem;
+            animation: countUp 1.5s ease-out forwards;
+        }
+
+        .stat-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .stat-number {
+            font-family: 'Fraunces', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            font-style: italic;
+            color: var(--fire-orange);
+            line-height: 1;
+            margin-bottom: 0.6rem;
+            display: block;
+            letter-spacing: -2px;
+        }
+
+        .stat-label {
+            font-size: 1.05rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .proof-box {
+            margin-top: 2.5rem;
+            padding: 1.8rem;
+            background: linear-gradient(135deg, rgba(0, 131, 143, 0.08), rgba(255, 182, 39, 0.08));
+            border-radius: 18px;
+            border-left: 5px solid var(--river-teal);
+        }
+
+        .proof-box p {
+            font-size: 1rem;
+            color: var(--charcoal);
+            font-weight: 600;
+            line-height: 1.7;
+        }
+
+        /* Problems Section */
+        .problems-section {
+            padding: 7rem 6%;
+            background: var(--charcoal);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .problems-section::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -15%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.12), transparent);
+            border-radius: 50%;
+            animation: float 15s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-50px, 50px); }
+        }
+
+        .section-wrapper {
+            max-width: 1300px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 1.2rem;
+            font-weight: 900;
+            font-style: italic;
+            letter-spacing: -2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3.5rem;
+        }
+
+        .problem-card {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 2.8rem;
+            border-radius: 22px;
+            border: 1.5px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .problem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.08), rgba(0, 131, 143, 0.08));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-12px);
+            border-color: var(--fire-orange);
+            box-shadow: 0 20px 50px rgba(255, 107, 53, 0.3);
+        }
+
+        .problem-card:hover::before {
+            opacity: 1;
+        }
+
+        .problem-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.3rem;
+            display: block;
+        }
+
+        .problem-card h3 {
+            font-size: 1.65rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            position: relative;
+            letter-spacing: -0.5px;
+        }
+
+        .problem-card p {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.75;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        /* Solution Section */
+        .solution-section {
+            padding: 7rem 6%;
+            background: white;
+        }
+
+        .solution-wrapper {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .solution-intro {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 5rem;
+        }
+
+        .solution-intro h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 1.5rem;
+            color: var(--charcoal);
+            font-weight: 900;
+            font-style: italic;
+            letter-spacing: -2px;
+        }
+
+        .solution-intro p {
+            font-size: 1.3rem;
+            color: #555;
+            line-height: 1.75;
+        }
+
+        .solution-intro strong {
+            color: var(--fire-orange);
+            font-weight: 800;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .approach-card {
+            background: linear-gradient(135deg, #FAFAFA, #FFF);
+            padding: 3rem;
+            border-radius: 25px;
+            border: 2.5px solid rgba(255, 107, 53, 0.12);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+        }
+
+        .approach-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 70px rgba(255, 107, 53, 0.2);
+            border-color: var(--fire-orange);
+        }
+
+        .approach-num {
+            position: absolute;
+            top: -18px;
+            right: 35px;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--fire-orange), var(--coral-pink));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-weight: 900;
+            font-style: italic;
+            font-size: 1.5rem;
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+        }
+
+        .approach-card h3 {
+            font-size: 1.65rem;
+            margin-bottom: 1.2rem;
+            color: var(--charcoal);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .approach-card p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Packages Section */
+        .packages-section {
+            padding: 7rem 6%;
+            background: linear-gradient(165deg, #FFF8E7, #FFEFD5, #FFE4CC);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .packages-section::before {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 131, 143, 0.08), transparent);
+            border-radius: 50%;
+        }
+
+        .packages-wrapper {
+            max-width: 1300px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4.5rem;
+        }
+
+        .package-card {
+            background: white;
+            padding: 3.5rem;
+            border-radius: 28px;
+            box-shadow: 0 15px 60px rgba(255, 107, 53, 0.12);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            border: 3px solid transparent;
+        }
+
+        .package-card:hover {
+            transform: translateY(-18px);
+            box-shadow: 0 30px 90px rgba(255, 107, 53, 0.25);
+            border-color: var(--fire-orange);
+        }
+
+        .package-featured {
+            border: 4px solid var(--fire-orange);
+            transform: scale(1.05);
+            box-shadow: 0 25px 80px rgba(255, 107, 53, 0.3);
+        }
+
+        .featured-tag {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--fire-orange), var(--sun-gold));
+            color: white;
+            padding: 0.6rem 1.8rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        .package-name {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.6rem;
+            color: var(--charcoal);
+            letter-spacing: -0.5px;
+        }
+
+        .package-price {
+            font-family: 'Fraunces', serif;
+            font-size: 3.2rem;
+            font-weight: 900;
+            font-style: italic;
+            color: var(--fire-orange);
+            margin-bottom: 1.2rem;
+            letter-spacing: -2px;
+        }
+
+        .package-price span {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 400;
+            font-family: 'Outfit', sans-serif;
+            font-style: normal;
+        }
+
+        .package-desc {
+            color: #666;
+            margin-bottom: 2.2rem;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .package-features {
+            list-style: none;
+            margin-bottom: 2.5rem;
+        }
+
+        .package-features li {
+            padding: 0.85rem 0;
+            color: var(--charcoal);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            font-size: 1.02rem;
+        }
+
+        .package-features li::before {
+            content: '✓';
+            color: var(--river-teal);
+            font-weight: 800;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .package-btn {
+            width: 100%;
+            padding: 1.4rem;
+            background: var(--charcoal);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .package-btn:hover {
+            background: var(--fire-orange);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
+        }
+
+        /* Final CTA Banner */
+        .cta-banner {
+            padding: 7rem 6%;
+            background: linear-gradient(135deg, var(--fire-orange), var(--coral-pink));
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner::before,
+        .cta-banner::after {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .cta-banner::before {
+            top: -250px;
+            left: -150px;
+        }
+
+        .cta-banner::after {
+            bottom: -250px;
+            right: -150px;
+        }
+
+        .cta-banner-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cta-banner h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            font-style: italic;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+
+        .cta-banner p {
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .cta-banner .cta-btn {
+            background: white;
+            color: var(--fire-orange);
+            font-size: 1.3rem;
+            padding: 1.5rem 3.5rem;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-banner .cta-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+        }
+
+        /* Footer */
+        footer {
+            padding: 3.5rem 6%;
+            background: var(--charcoal);
+            color: white;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.7;
+            font-size: 1.05rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            .hero-visual {
+                order: -1;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            .results-card {
+                transform: rotate(0deg);
+            }
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .package-featured {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            .subheading {
+                font-size: 1.15rem;
+            }
+
+            .hero-cta-group {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .cta-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .stat-number {
+                font-size: 3.2rem;
+            }
+
+            .section-title {
+                font-size: 2.8rem;
+            }
+
+            .problems-grid,
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem;
+                letter-spacing: -1.5px;
+            }
+
+            .logo {
+                font-size: 1.6rem;
+            }
+
+            .results-card {
+                padding: 2rem;
+            }
+        }
+
+        /* Scroll animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+.packages-section .section-subtitle {
+    color: var(--charcoal);
+    opacity: 1;
+}
+
+    </style>
+</head>
+<body>
+    <div class="bg-layer">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <header>
+        <div class="logo">LiveLikeMorgan</div>
+        <a href="https://calendly.com/morgannyameye/strategy-call" target="_blank" class="cta-btn">Book Your Strategy Call</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge">
+                    <span class="badge-icon">📍</span>
+                    <span>Organic Growth Expert</span>
+                </div>
+                <h1>
+                    Fill Your Events & Build a Thriving Social Media Presence—<span class="highlight">With Structure</span>
+                </h1>
+                <p class="subheading">
+                    Stop wasting money on ads that don't convert and watching empty seats at your events. We use proven organic strategies to pack your venues and grow your business sustainably—so you can finally see real ROI from social media.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#packages" class="cta-btn cta-primary">View Our Packages</a>
+                    <a href="#solution" class="cta-btn cta-secondary">See How It Works</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="results-card">
+                    <div class="stat-block">
+                        <span class="stat-number">1M+</span>
+                        <span class="stat-label">Organic Views Generated</span>
+                    </div>
+                    <div class="stat-block">
+                        <span class="stat-number">7 Years</span>
+                        <span class="stat-label">Proven Experience</span>
+                    </div>
+                    <div class="stat-block">
+                        <span class="stat-number">$0</span>
+                        <span class="stat-label">Spent on Ads</span>
+                    </div>
+                    <div class="proof-box">
+                        <p>✓ Generated 1M+ views using organic strategies<br>✓ Now delivering strategic marketing solutions that drive real, measurable results</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="problems-section">
+        <div class="section-wrapper">
+            <div class="section-header">
+                <h2 class="section-title">Does This Sound Familiar?</h2>
+                <p class="section-subtitle">You're working hard, but your social media and events aren't delivering the results you need.</p>
+            </div>
+            <div class="problems-grid scroll-reveal">
+                <div class="problem-card">
+                    <span class="problem-icon">💸</span>
+                    <h3>Throwing Money at Ads</h3>
+                    <p>You've spent hundreds (maybe thousands) on Facebook and Instagram ads. The costs keep climbing, but attendance and engagement stay flat. You know there has to be a better way.</p>
+                </div>
+                <div class="problem-card">
+                    <span class="problem-icon">📉</span>
+                    <h3>Inconsistent Social Media</h3>
+                    <p>Your posting schedule is all over the place. When you do post, engagement is minimal. You feel like you're shouting into the void—and honestly, you might be.</p>
+                </div>
+                <div class="problem-card">
+                    <span class="problem-icon">🪑</span>
+                    <h3>Empty Event Seats</h3>
+                    <p>You plan incredible events, but turnout is disappointing. You don't have the budget for expensive promotion, and you're losing money every time. It's frustrating and unsustainable.</p>
+                </div>
+                <div class="problem-card">
+                    <span class="problem-icon">⏰</span>
+                    <h3>No Time or Strategy</h3>
+                    <p>Between running your business and everything else on your plate, social media strategy falls to the bottom of the list. You need help from someone who actually knows what they're doing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solution-section" id="solution">
+        <div class="solution-wrapper">
+            <div class="solution-intro scroll-reveal">
+                <h2>Our Organic Growth System</h2>
+                <p>We help businesses fill events and grow their brand using <strong>proven organic strategies</strong>—the same approach that generated 1M+ views and built consistent engagement across campaigns.</p>
+            </div>
+            <div class="approach-grid scroll-reveal">
+                <div class="approach-card">
+                    <div class="approach-num">1</div>
+                    <h3>Strategic Content That Converts</h3>
+                    <p>We create scroll-stopping social media content designed specifically for your audience. No generic posts—just content that drives real engagement and action.</p>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-num">2</div>
+                    <h3>Event Promotion That Fills Seats</h3>
+                    <p>Using organic promotion tactics proven across 1M+ views, we build buzz before, during, and after your events. Your audience will be excited to attend—and they'll tell their friends.</p>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-num">3</div>
+                    <h3>Consistent Growth Without Ads</h3>
+                    <p>We build your organic reach systematically using platforms, hashtags, timing, and engagement strategies that actually work. Sustainable growth that doesn't drain your budget.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="packages-section" id="packages">
+        <div class="packages-wrapper">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">Choose Your Package</h2>
+                <p class="section-subtitle">Whether you need social media management, event promotion, or full-service support, we've got you covered.</p>
+            </div>
+            <div class="packages-grid scroll-reveal">
+                <div class="package-card">
+                    <div class="package-name">Starter</div>
+                    <div class="package-price">$650<span>/month</span></div>
+                    <div class="package-desc">Perfect for businesses ready to establish a consistent social media presence and grow organically.</div>
+                    <ul class="package-features">
+                        <li>3 social media platforms managed</li>
+                        <li>8 high-quality posts per month</li>
+                        <li>Basic analytics and reporting</li>
+                        <li>Monthly strategy call</li>
+                        <li>Organic growth strategies</li>
+                    </ul>
+                    <button class="package-btn">Get Started</button>
+                </div>
+
+                <div class="package-card package-featured">
+                    <div class="featured-tag">Most Popular</div>
+                    <div class="package-name">Growth</div>
+                    <div class="package-price">$800-$1,200<span>/month</span></div>
+                    <div class="package-desc">Our most popular package—social media management plus powerful event promotion that fills seats.</div>
+                    <ul class="package-features">
+                        <li>4 social media platforms managed</li>
+                        <li>20 high-quality posts per month</li>
+                        <li>Event promotion campaigns</li>
+                        <li>Bi-weekly strategy check-ins</li>
+                        <li>Advanced analytics and insights</li>
+                        <li>Audience engagement tactics</li>
+                    </ul>
+                    <button class="package-btn">Get Started</button>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-name">Premium</div>
+                    <div class="package-price">$1,500-$2,500<span>/event</span></div>
+                    <div class="package-desc">Full-service event planning and promotion—from concept to execution, we handle everything.</div>
+                    <ul class="package-features">
+                        <li>Complete event planning and coordination</li>
+                        <li>Pre, during, and post-event promotion</li>
+                        <li>Vendor coordination and management</li>
+                        <li>Multi-platform promotional campaigns</li>
+                        <li>On-site support during event</li>
+                        <li>Post-event analytics and recap</li>
+                    </ul>
+                    <button class="package-btn">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <div class="cta-banner-content">
+            <h2>Ready to Fill Your Events & Grow Organically?</h2>
+            <p>Stop wasting money on ads that don't work. Let's build your brand the right way—with organic strategies that deliver real, lasting results.</p>
+            <a href="https://calendly.com/morgannyameye/strategy-call" target="_blank" class="cta-btn">Book Your Free Strategy Call</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2019 Morgan Social. Helping brands businesses with structured organic growth strategies.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
