@@ -1,6 +1,6 @@
 LiveLikeMorgan — Landing Page
 Brand: LLM (a division of The Mia Cimone Experience)  
-Rep: Morgan Boamah  
+Rep: LLM 
 Live Booking Link: calendly.com/morgannyameye/strategy-call
 ---
 Overview
@@ -9,7 +9,7 @@ The page is designed to convert visitors into booked strategy calls by leading t
 ---
 Brand & Mission
 LLM helps businesses and event organizers grow their brand and fill their events using proven organic social media strategies — no ad spend required.
-Morgan brings 7 years of experience and a track record of 1M+ organic views to every client engagement. The mission is to deliver real, measurable results through structured content strategy, consistent posting, and smart event promotion — so clients see sustainable growth without draining their budgets on paid ads.
+LLM brings 7 years of experience and a track record of 1M+ organic views to every client engagement. The mission is to deliver real, measurable results through structured content strategy, consistent posting, and smart event promotion — so clients see sustainable growth without draining their budgets on paid ads.
 ---
 Services Offered
 Service	Description
