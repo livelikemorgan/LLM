@@ -1,1171 +1,517 @@
-<index.html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fill Your Events & Grow Organically | Social Media Growth Expert</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --fire-orange: #FF6B35;
-            --sun-gold: #FFB627;
-            --river-teal: #00838F;
-            --warm-cream: #FFF8E7;
-            --charcoal: #1A1A1A;
-            --soft-white: #FEFEFE;
-            --coral-pink: #FF8C69;
-        }
-
-        body {
-            font-family: 'Outfit', sans-serif;
-            color: var(--charcoal);
-            background: var(--warm-cream);
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        /* Animated background gradient */
-        .bg-layer {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: radial-gradient(ellipse at top right, #FFE8CC 0%, var(--warm-cream) 50%, #FFF3D6 100%);
-            animation: bgPulse 20s ease-in-out infinite;
-        }
-
-        @keyframes bgPulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.85; }
-        }
-
-        /* Decorative organic blobs */
-        .blob {
-            position: absolute;
-            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-            opacity: 0.08;
-            filter: blur(40px);
-            animation: morphBlob 25s ease-in-out infinite;
-        }
-
-        .blob-1 {
-            width: 500px;
-            height: 500px;
-            background: var(--fire-orange);
-            top: -150px;
-            right: -100px;
-            animation-delay: 0s;
-        }
-
-        .blob-2 {
-            width: 400px;
-            height: 400px;
-            background: var(--river-teal);
-            bottom: -100px;
-            left: -80px;
-            animation-delay: 8s;
-        }
-
-        .blob-3 {
-            width: 350px;
-            height: 350px;
-            background: var(--sun-gold);
-            top: 40%;
-            right: 5%;
-            animation-delay: 15s;
-        }
-
-        @keyframes morphBlob {
-            0%, 100% {
-                border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-                transform: translate(0, 0) rotate(0deg);
-            }
-            25% {
-                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-                transform: translate(30px, -30px) rotate(90deg);
-            }
-            50% {
-                border-radius: 30% 70% 50% 50% / 50% 60% 40% 60%;
-                transform: translate(-30px, 30px) rotate(180deg);
-            }
-            75% {
-                border-radius: 70% 30% 60% 40% / 40% 70% 50% 60%;
-                transform: translate(20px, 20px) rotate(270deg);
-            }
-        }
-
-        /* Header */
-        header {
-            padding: 2rem 6%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            z-index: 100;
-            animation: slideDown 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .logo {
-            font-family: 'Fraunces', serif;
-            font-size: 2rem;
-            font-weight: 900;
-            font-style: italic;
-            color: var(--charcoal);
-            letter-spacing: -0.5px;
-            position: relative;
-        }
-
-        .logo::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 60%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--fire-orange), var(--sun-gold));
-            border-radius: 2px;
-        }
-
-        .cta-btn {
-            padding: 1rem 2.2rem;
-            background: var(--fire-orange);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            font-size: 1.05rem;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-            text-decoration: none;
-            display: inline-block;
-            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.25);
-            transform: translate(-50%, -50%);
-            transition: width 0.5s, height 0.5s;
-        }
-
-        .cta-btn:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.5);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 92vh;
-            display: flex;
-            align-items: center;
-            padding: 0 6%;
-            position: relative;
-        }
-
-        .hero-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1.3fr 1fr;
-            gap: 5rem;
-            align-items: center;
-        }
-
-        .hero-content {
-            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            padding: 0.6rem 1.4rem;
-            background: linear-gradient(135deg, var(--river-teal), #00A9BB);
-            color: white;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 2rem;
-            animation: glow 3s ease-in-out infinite;
-        }
-
-        @keyframes glow {
-            0%, 100% {
-                box-shadow: 0 0 20px rgba(0, 131, 143, 0.3);
-            }
-            50% {
-                box-shadow: 0 0 30px rgba(0, 131, 143, 0.6);
-            }
-        }
-
-        .badge-icon {
-            font-size: 1.2rem;
-        }
-
-        h1 {
-            font-family: 'Fraunces', serif;
-            font-size: clamp(3rem, 7vw, 6.5rem);
-            line-height: 1.05;
-            color: var(--charcoal);
-            margin-bottom: 1.8rem;
-            font-weight: 900;
-            letter-spacing: -3px;
-        }
-
-        .highlight {
-            color: var(--fire-orange);
-            font-style: italic;
-            position: relative;
-            display: inline-block;
-        }
-
-        .highlight::after {
-            content: '';
-            position: absolute;
-            bottom: 0.08em;
-            left: -0.05em;
-            right: -0.05em;
-            height: 0.18em;
-            background: var(--sun-gold);
-            opacity: 0.4;
-            z-index: -1;
-            transform: scaleX(0);
-            transform-origin: left;
-            animation: underlineGrow 1s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards;
-        }
-
-        @keyframes underlineGrow {
-            to { transform: scaleX(1); }
-        }
-
-        .subheading {
-            font-size: clamp(1.15rem, 2.2vw, 1.5rem);
-            color: #4A4A4A;
-            margin-bottom: 3rem;
-            line-height: 1.75;
-            font-weight: 500;
-            max-width: 650px;
-        }
-
-        .subheading strong {
-            color: var(--charcoal);
-            font-weight: 700;
-        }
-
-        .hero-cta-group {
-            display: flex;
-            gap: 1.2rem;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .cta-primary {
-            padding: 1.3rem 3rem;
-            font-size: 1.15rem;
-        }
-
-        .cta-secondary {
-            padding: 1.3rem 3rem;
-            background: transparent;
-            color: var(--charcoal);
-            border: 2.5px solid var(--charcoal);
-            font-weight: 700;
-            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-            box-shadow: none;
-        }
-
-        .cta-secondary:hover {
-            background: var(--charcoal);
-            color: white;
-            box-shadow: 0 8px 30px rgba(26, 26, 26, 0.3);
-        }
-
-        /* Hero Stats Card */
-        .hero-visual {
-            position: relative;
-            animation: fadeInRight 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
-        }
-
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .results-card {
-            background: white;
-            border-radius: 25px;
-            padding: 3rem;
-            box-shadow: 0 25px 80px rgba(255, 107, 53, 0.15);
-            position: relative;
-            border: 3px solid rgba(255, 107, 53, 0.15);
-            transform: rotate(-2deg);
-            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        .results-card:hover {
-            transform: rotate(0deg) translateY(-10px);
-        }
-
-        .results-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 8px;
-            background: linear-gradient(90deg, var(--fire-orange), var(--sun-gold), var(--river-teal));
-            border-radius: 25px 25px 0 0;
-        }
-
-        .stat-block {
-            margin-bottom: 2.5rem;
-            animation: countUp 1.5s ease-out forwards;
-        }
-
-        .stat-block:last-child {
-            margin-bottom: 0;
-        }
-
-        .stat-number {
-            font-family: 'Fraunces', serif;
-            font-size: 4rem;
-            font-weight: 900;
-            font-style: italic;
-            color: var(--fire-orange);
-            line-height: 1;
-            margin-bottom: 0.6rem;
-            display: block;
-            letter-spacing: -2px;
-        }
-
-        .stat-label {
-            font-size: 1.05rem;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
-        }
-
-        .proof-box {
-            margin-top: 2.5rem;
-            padding: 1.8rem;
-            background: linear-gradient(135deg, rgba(0, 131, 143, 0.08), rgba(255, 182, 39, 0.08));
-            border-radius: 18px;
-            border-left: 5px solid var(--river-teal);
-        }
-
-        .proof-box p {
-            font-size: 1rem;
-            color: var(--charcoal);
-            font-weight: 600;
-            line-height: 1.7;
-        }
-
-        /* Problems Section */
-        .problems-section {
-            padding: 7rem 6%;
-            background: var(--charcoal);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .problems-section::before {
-            content: '';
-            position: absolute;
-            top: -30%;
-            right: -15%;
-            width: 700px;
-            height: 700px;
-            background: radial-gradient(circle, rgba(255, 107, 53, 0.12), transparent);
-            border-radius: 50%;
-            animation: float 15s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(-50px, 50px); }
-        }
-
-        .section-wrapper {
-            max-width: 1300px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            font-family: 'Fraunces', serif;
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            margin-bottom: 1.2rem;
-            font-weight: 900;
-            font-style: italic;
-            letter-spacing: -2px;
-        }
-
-        .section-subtitle {
-            font-size: 1.3rem;
-            color: rgba(255, 255, 255, 0.8);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .problems-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3.5rem;
-        }
-
-        .problem-card {
-            background: rgba(255, 255, 255, 0.04);
-            padding: 2.8rem;
-            border-radius: 22px;
-            border: 1.5px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .problem-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(255, 107, 53, 0.08), rgba(0, 131, 143, 0.08));
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .problem-card:hover {
-            transform: translateY(-12px);
-            border-color: var(--fire-orange);
-            box-shadow: 0 20px 50px rgba(255, 107, 53, 0.3);
-        }
-
-        .problem-card:hover::before {
-            opacity: 1;
-        }
-
-        .problem-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.3rem;
-            display: block;
-        }
-
-        .problem-card h3 {
-            font-size: 1.65rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
-            position: relative;
-            letter-spacing: -0.5px;
-        }
-
-        .problem-card p {
-            color: rgba(255, 255, 255, 0.85);
-            line-height: 1.75;
-            position: relative;
-            font-size: 1.05rem;
-        }
-
-        /* Solution Section */
-        .solution-section {
-            padding: 7rem 6%;
-            background: white;
-        }
-
-        .solution-wrapper {
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-
-        .solution-intro {
-            text-align: center;
-            max-width: 850px;
-            margin: 0 auto 5rem;
-        }
-
-        .solution-intro h2 {
-            font-family: 'Fraunces', serif;
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            margin-bottom: 1.5rem;
-            color: var(--charcoal);
-            font-weight: 900;
-            font-style: italic;
-            letter-spacing: -2px;
-        }
-
-        .solution-intro p {
-            font-size: 1.3rem;
-            color: #555;
-            line-height: 1.75;
-        }
-
-        .solution-intro strong {
-            color: var(--fire-orange);
-            font-weight: 800;
-        }
-
-        .approach-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4rem;
-        }
-
-        .approach-card {
-            background: linear-gradient(135deg, #FAFAFA, #FFF);
-            padding: 3rem;
-            border-radius: 25px;
-            border: 2.5px solid rgba(255, 107, 53, 0.12);
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            position: relative;
-        }
-
-        .approach-card:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: 0 25px 70px rgba(255, 107, 53, 0.2);
-            border-color: var(--fire-orange);
-        }
-
-        .approach-num {
-            position: absolute;
-            top: -18px;
-            right: 35px;
-            width: 55px;
-            height: 55px;
-            background: linear-gradient(135deg, var(--fire-orange), var(--coral-pink));
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Fraunces', serif;
-            font-weight: 900;
-            font-style: italic;
-            font-size: 1.5rem;
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
-        }
-
-        .approach-card h3 {
-            font-size: 1.65rem;
-            margin-bottom: 1.2rem;
-            color: var(--charcoal);
-            font-weight: 800;
-            letter-spacing: -0.5px;
-        }
-
-        .approach-card p {
-            color: #555;
-            line-height: 1.8;
-            font-size: 1.05rem;
-        }
-
-        /* Packages Section */
-        .packages-section {
-            padding: 7rem 6%;
-            background: linear-gradient(165deg, #FFF8E7, #FFEFD5, #FFE4CC);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .packages-section::before {
-            content: '';
-            position: absolute;
-            bottom: -20%;
-            left: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(0, 131, 143, 0.08), transparent);
-            border-radius: 50%;
-        }
-
-        .packages-wrapper {
-            max-width: 1300px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .packages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4.5rem;
-        }
-
-        .package-card {
-            background: white;
-            padding: 3.5rem;
-            border-radius: 28px;
-            box-shadow: 0 15px 60px rgba(255, 107, 53, 0.12);
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            position: relative;
-            border: 3px solid transparent;
-        }
-
-        .package-card:hover {
-            transform: translateY(-18px);
-            box-shadow: 0 30px 90px rgba(255, 107, 53, 0.25);
-            border-color: var(--fire-orange);
-        }
-
-        .package-featured {
-            border: 4px solid var(--fire-orange);
-            transform: scale(1.05);
-            box-shadow: 0 25px 80px rgba(255, 107, 53, 0.3);
-        }
-
-        .featured-tag {
-            position: absolute;
-            top: -16px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, var(--fire-orange), var(--sun-gold));
-            color: white;
-            padding: 0.6rem 1.8rem;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
-        }
-
-        .package-name {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 0.6rem;
-            color: var(--charcoal);
-            letter-spacing: -0.5px;
-        }
-
-        .package-price {
-            font-family: 'Fraunces', serif;
-            font-size: 3.2rem;
-            font-weight: 900;
-            font-style: italic;
-            color: var(--fire-orange);
-            margin-bottom: 1.2rem;
-            letter-spacing: -2px;
-        }
-
-        .package-price span {
-            font-size: 1.1rem;
-            color: #666;
-            font-weight: 400;
-            font-family: 'Outfit', sans-serif;
-            font-style: normal;
-        }
-
-        .package-desc {
-            color: #666;
-            margin-bottom: 2.2rem;
-            line-height: 1.7;
-            font-size: 1.05rem;
-        }
-
-        .package-features {
-            list-style: none;
-            margin-bottom: 2.5rem;
-        }
-
-        .package-features li {
-            padding: 0.85rem 0;
-            color: var(--charcoal);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            font-size: 1.02rem;
-        }
-
-        .package-features li::before {
-            content: '✓';
-            color: var(--river-teal);
-            font-weight: 800;
-            font-size: 1.4rem;
-            flex-shrink: 0;
-        }
-
-        .package-btn {
-            width: 100%;
-            padding: 1.4rem;
-            background: var(--charcoal);
-            color: white;
-            border: none;
-            border-radius: 14px;
-            font-family: 'Outfit', sans-serif;
-            font-weight: 800;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .package-btn:hover {
-            background: var(--fire-orange);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
-        }
-
-        /* Final CTA Banner */
-        .cta-banner {
-            padding: 7rem 6%;
-            background: linear-gradient(135deg, var(--fire-orange), var(--coral-pink));
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-banner::before,
-        .cta-banner::after {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .cta-banner::before {
-            top: -250px;
-            left: -150px;
-        }
-
-        .cta-banner::after {
-            bottom: -250px;
-            right: -150px;
-        }
-
-        .cta-banner-content {
-            position: relative;
-            z-index: 1;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .cta-banner h2 {
-            font-family: 'Fraunces', serif;
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            margin-bottom: 1.5rem;
-            font-weight: 900;
-            font-style: italic;
-            letter-spacing: -2px;
-            line-height: 1.1;
-        }
-
-        .cta-banner p {
-            font-size: 1.4rem;
-            margin-bottom: 3rem;
-            opacity: 0.95;
-            line-height: 1.6;
-        }
-
-        .cta-banner .cta-btn {
-            background: white;
-            color: var(--fire-orange);
-            font-size: 1.3rem;
-            padding: 1.5rem 3.5rem;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .cta-banner .cta-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
-        }
-
-        /* Footer */
-        footer {
-            padding: 3.5rem 6%;
-            background: var(--charcoal);
-            color: white;
-            text-align: center;
-        }
-
-        footer p {
-            opacity: 0.7;
-            font-size: 1.05rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 4rem;
-            }
-
-            .hero-visual {
-                order: -1;
-                max-width: 500px;
-                margin: 0 auto;
-            }
-
-            h1 {
-                font-size: 4rem;
-            }
-
-            .results-card {
-                transform: rotate(0deg);
-            }
-
-            .packages-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .package-featured {
-                transform: scale(1);
-            }
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 1.5rem;
-                text-align: center;
-            }
-
-            h1 {
-                font-size: 3rem;
-            }
-
-            .subheading {
-                font-size: 1.15rem;
-            }
-
-            .hero-cta-group {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .cta-btn {
-                width: 100%;
-                text-align: center;
-            }
-
-            .stat-number {
-                font-size: 3.2rem;
-            }
-
-            .section-title {
-                font-size: 2.8rem;
-            }
-
-            .problems-grid,
-            .approach-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2.5rem;
-                letter-spacing: -1.5px;
-            }
-
-            .logo {
-                font-size: 1.6rem;
-            }
-
-            .results-card {
-                padding: 2rem;
-            }
-        }
-
-        /* Scroll animations */
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .scroll-reveal.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
-.packages-section .section-subtitle {
-    color: var(--charcoal);
-    opacity: 1;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLM Client Hub</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0e0e10;
+  --surface: #18181c;
+  --surface2: #1f1f25;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.12);
+  --text: #f0eff4;
+  --muted: #8b8a96;
+  --accent: #b49cf8;
+  --accent-dim: rgba(180,156,248,0.12);
+  --accent-dim2: rgba(180,156,248,0.2);
+  --green: #5de8a8;
+  --green-dim: rgba(93,232,168,0.12);
+  --amber: #f5c542;
+  --amber-dim: rgba(245,197,66,0.12);
+  --red: #f97066;
+  --red-dim: rgba(249,112,102,0.12);
+  --radius: 10px;
+  --radius-lg: 14px;
 }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:14px;line-height:1.6}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
 
-    </style>
+.layout{display:grid;grid-template-columns:220px 1fr;min-height:100vh}
+
+/* Sidebar */
+.sidebar{background:var(--surface);border-right:1px solid var(--border);padding:24px 16px;display:flex;flex-direction:column;gap:4px;position:sticky;top:0;height:100vh;overflow-y:auto}
+.logo{padding:8px 12px;margin-bottom:16px}
+.logo-text{font-size:22px;font-weight:600;letter-spacing:-0.5px;color:var(--text)}
+.logo-sub{font-size:11px;color:var(--muted);letter-spacing:0.5px;text-transform:uppercase;margin-top:1px}
+.nav-item{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:var(--radius);cursor:pointer;color:var(--muted);font-size:13px;font-weight:400;transition:all 0.15s;border:none;background:transparent;width:100%;text-align:left}
+.nav-item:hover{color:var(--text);background:var(--surface2)}
+.nav-item.active{color:var(--accent);background:var(--accent-dim);font-weight:500}
+.nav-icon{width:16px;height:16px;opacity:0.7;flex-shrink:0}
+.nav-item.active .nav-icon{opacity:1}
+.sidebar-footer{margin-top:auto;padding-top:16px;border-top:1px solid var(--border)}
+.sidebar-tag{font-size:11px;color:var(--muted);padding:4px 12px}
+
+/* Main */
+.main{padding:32px 36px;overflow-y:auto}
+.page{display:none}.page.active{display:block}
+.page-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+.page-title{font-size:20px;font-weight:600;letter-spacing:-0.3px}
+.page-sub{font-size:13px;color:var(--muted);margin-top:2px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:var(--radius);font-size:13px;font-weight:500;cursor:pointer;transition:all 0.15s;border:none;font-family:'DM Sans',sans-serif}
+.btn-primary{background:var(--accent);color:#0e0e10}
+.btn-primary:hover{background:#c8b4ff;transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border2)}
+.btn-ghost:hover{color:var(--text);border-color:var(--border2);background:var(--surface2)}
+.btn-sm{padding:5px 11px;font-size:12px}
+
+/* Metrics */
+.metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px}
+.metric-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:18px 20px}
+.metric-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px}
+.metric-val{font-size:26px;font-weight:600;letter-spacing:-0.5px;font-family:'DM Mono',monospace}
+.metric-val.green{color:var(--green)}
+.metric-val.accent{color:var(--accent)}
+
+/* Cards */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px 22px;margin-bottom:16px}
+.card-title{font-size:13px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:14px}
+
+/* Grid */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+
+/* Client rows */
+.client-row{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border)}
+.client-row:last-child{border-bottom:none}
+.avatar{width:38px;height:38px;border-radius:50%;background:var(--accent-dim);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--accent);flex-shrink:0;letter-spacing:0.5px}
+.client-meta{flex:1;min-width:0}
+.client-name{font-weight:500;font-size:14px}
+.client-sub{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rate-pill{font-family:'DM Mono',monospace;font-size:12px;color:var(--green);background:var(--green-dim);padding:3px 9px;border-radius:20px;white-space:nowrap}
+
+/* Badges */
+.badge{display:inline-flex;align-items:center;font-size:11px;font-weight:500;padding:2px 9px;border-radius:20px;letter-spacing:0.2px}
+.badge-active{background:var(--green-dim);color:var(--green)}
+.badge-paid{background:var(--green-dim);color:var(--green)}
+.badge-pending{background:var(--amber-dim);color:var(--amber)}
+.badge-unpaid{background:var(--red-dim);color:var(--red)}
+
+/* Table */
+.data-table{width:100%;border-collapse:collapse;font-size:13px}
+.data-table th{text-align:left;padding:8px 10px;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:0.5px;font-weight:500;border-bottom:1px solid var(--border)}
+.data-table td{padding:11px 10px;border-bottom:1px solid var(--border)}
+.data-table tr:last-child td{border-bottom:none}
+.data-table tr:hover td{background:var(--surface2)}
+.amount-cell{font-family:'DM Mono',monospace;color:var(--green);font-weight:500}
+
+/* Checklist */
+.checklist{list-style:none}
+.checklist li{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px}
+.checklist li:last-child{border-bottom:none}
+.check-box{width:20px;height:20px;border-radius:6px;border:1.5px solid var(--border2);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all 0.15s;background:transparent}
+.check-box.done{background:var(--green);border-color:var(--green)}
+.check-box.done svg{display:block}
+.check-box svg{display:none;width:11px;height:11px}
+.progress-track{height:5px;background:var(--surface2);border-radius:3px;overflow:hidden;margin:8px 0 16px}
+.progress-fill{height:100%;background:var(--green);border-radius:3px;transition:width 0.4s cubic-bezier(.4,0,.2,1)}
+
+/* Modal */
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);z-index:200;align-items:center;justify-content:center}
+.overlay.open{display:flex}
+.modal{background:var(--surface);border:1px solid var(--border2);border-radius:var(--radius-lg);padding:28px;width:92%;max-width:500px;max-height:90vh;overflow-y:auto}
+.modal-title{font-size:16px;font-weight:600;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center}
+.close-btn{background:transparent;border:none;color:var(--muted);cursor:pointer;font-size:20px;line-height:1;padding:0 4px}
+.close-btn:hover{color:var(--text)}
+
+/* Forms */
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-size:12px;color:var(--muted);margin-bottom:5px;font-weight:500}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:9px 12px;background:var(--surface2);border:1px solid var(--border2);border-radius:var(--radius);color:var(--text);font-size:13px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color 0.15s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent)}
+.form-group textarea{resize:vertical;min-height:72px}
+select option{background:var(--surface2)}
+
+/* Tabs */
+.tabs{display:flex;gap:2px;background:var(--surface2);border-radius:var(--radius);padding:3px;margin-bottom:18px;width:fit-content}
+.tab{padding:5px 14px;border-radius:7px;border:none;background:transparent;color:var(--muted);font-size:12px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.15s}
+.tab.active{background:var(--surface);color:var(--text)}
+.tab-section{display:none}.tab-section.active{display:block}
+
+/* Activity */
+.activity-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px}
+.activity-row:last-child{border-bottom:none}
+
+/* Empty */
+.empty{text-align:center;padding:32px;color:var(--muted);font-size:13px}
+
+/* Dot indicator */
+.dot{width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block;margin-right:6px}
+
+@media(max-width:800px){
+  .layout{grid-template-columns:1fr}
+  .sidebar{height:auto;position:static;flex-direction:row;flex-wrap:wrap;padding:12px}
+  .logo{margin-bottom:0}
+  .metrics-grid{grid-template-columns:1fr 1fr}
+  .grid2{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .main{padding:20px 16px}
+}
+</style>
 </head>
 <body>
-    <div class="bg-layer">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
+<div class="layout">
+
+<!-- Sidebar -->
+<aside class="sidebar">
+  <div class="logo">
+    <div class="logo-text">LLM</div>
+    <div class="logo-sub">Client Hub</div>
+  </div>
+  <button class="nav-item active" onclick="showPage('dashboard',this)">
+    <svg class="nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="6" height="6" rx="1.5"/><rect x="9" y="1" width="6" height="6" rx="1.5"/><rect x="1" y="9" width="6" height="6" rx="1.5"/><rect x="9" y="9" width="6" height="6" rx="1.5"/></svg>
+    Dashboard
+  </button>
+  <button class="nav-item" onclick="showPage('clients',this)">
+    <svg class="nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="5" r="3"/><path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg>
+    Clients
+  </button>
+  <button class="nav-item" onclick="showPage('payments',this)">
+    <svg class="nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="14" height="9" rx="1.5"/><path d="M1 7h14"/><path d="M4 10.5h2"/></svg>
+    Payments
+  </button>
+  <button class="nav-item" onclick="showPage('onboarding',this)">
+    <svg class="nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4h10M3 8h7M3 12h5"/><circle cx="13" cy="11" r="2.5"/><path d="M11.5 11l1 1 1.5-1.5"/></svg>
+    Onboarding
+  </button>
+  <div class="sidebar-footer">
+    <div class="sidebar-tag">The Cimone Experience</div>
+  </div>
+</aside>
+
+<!-- Main -->
+<main class="main">
+
+  <!-- Dashboard -->
+  <div id="page-dashboard" class="page active">
+    <div class="page-header">
+      <div><div class="page-title">Dashboard</div><div class="page-sub">Welcome back, Morgan</div></div>
     </div>
+    <div class="metrics-grid" id="dash-metrics"></div>
+    <div class="grid2">
+      <div class="card">
+        <div class="card-title">Recent payments</div>
+        <div id="dash-recent"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Upcoming invoices</div>
+        <div id="dash-upcoming"></div>
+      </div>
+    </div>
+  </div>
 
-    <header>
-        <div class="logo">LiveLikeMorgan</div>
-        <a href="https://calendly.com/morgannyameye/strategy-call" target="_blank" class="cta-btn">Book Your Strategy Call</a>
-    </header>
+  <!-- Clients -->
+  <div id="page-clients" class="page">
+    <div class="page-header">
+      <div><div class="page-title">Clients</div><div class="page-sub" id="client-count">0 clients</div></div>
+      <button class="btn btn-primary" onclick="openModal('add-client')">+ Add client</button>
+    </div>
+    <div class="card"><div id="client-list"></div></div>
+  </div>
 
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="badge">
-                    <span class="badge-icon">📍</span>
-                    <span>Organic Growth Expert</span>
-                </div>
-                <h1>
-                    Fill Your Events & Build a Thriving Social Media Presence—<span class="highlight">With Structure</span>
-                </h1>
-                <p class="subheading">
-                    Stop wasting money on ads that don't convert and watching empty seats at your events. We use proven organic strategies to pack your venues and grow your business sustainably—so you can finally see real ROI from social media.
-                </p>
-                <div class="hero-cta-group">
-                    <a href="#packages" class="cta-btn cta-primary">View Our Packages</a>
-                    <a href="#solution" class="cta-btn cta-secondary">See How It Works</a>
-                </div>
-            </div>
+  <!-- Payments -->
+  <div id="page-payments" class="page">
+    <div class="page-header">
+      <div><div class="page-title">Payments</div><div class="page-sub">Full payment history</div></div>
+      <button class="btn btn-primary" onclick="openModal('add-payment')">+ Log payment</button>
+    </div>
+    <div class="card"><div id="payment-list"></div></div>
+  </div>
 
-            <div class="hero-visual">
-                <div class="results-card">
-                    <div class="stat-block">
-                        <span class="stat-number">1M+</span>
-                        <span class="stat-label">Organic Views Generated</span>
-                    </div>
-                    <div class="stat-block">
-                        <span class="stat-number">7 Years</span>
-                        <span class="stat-label">Proven Experience</span>
-                    </div>
-                    <div class="stat-block">
-                        <span class="stat-number">$0</span>
-                        <span class="stat-label">Spent on Ads</span>
-                    </div>
-                    <div class="proof-box">
-                        <p>✓ Generated 1M+ views using organic strategies<br>✓ Now delivering strategic marketing solutions that drive real, measurable results</p>
-                    </div>
-                </div>
-            </div>
+  <!-- Onboarding -->
+  <div id="page-onboarding" class="page">
+    <div class="page-header">
+      <div><div class="page-title">Onboarding</div><div class="page-sub">Track each client's setup progress</div></div>
+    </div>
+    <div class="card">
+      <div class="form-group" style="margin-bottom:16px">
+        <label>Select client</label>
+        <select id="onboard-select" onchange="renderOnboarding()">
+          <option value="">— choose a client —</option>
+        </select>
+      </div>
+      <div id="onboard-body"><div class="empty">Select a client above</div></div>
+    </div>
+  </div>
+
+</main>
+</div>
+
+<!-- Modal: Add Client -->
+<div class="overlay" id="modal-add-client">
+  <div class="modal">
+    <div class="modal-title">Add new client <button class="close-btn" onclick="closeModal('add-client')">&times;</button></div>
+    <div class="form-row">
+      <div class="form-group"><label>Client name *</label><input id="c-name" placeholder="Christie Pratt"></div>
+      <div class="form-group"><label>Business name</label><input id="c-biz" placeholder="Pratts Family Insurance"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Email</label><input id="c-email" type="email" placeholder="email@example.com"></div>
+      <div class="form-group"><label>Phone</label><input id="c-phone" placeholder="(901) 555-0100"></div>
+    </div>
+    <div class="form-group"><label>Services</label><input id="c-services" placeholder="Facebook & Instagram Management"></div>
+    <div class="form-row">
+      <div class="form-group"><label>Monthly retainer ($)</label><input id="c-rate" type="number" placeholder="450"></div>
+      <div class="form-group"><label>Payment method</label>
+        <select id="c-paymethod"><option>Zelle</option><option>CashApp</option><option>PayPal</option><option>Bank transfer</option><option>Other</option></select>
+      </div>
+    </div>
+    <div class="form-group"><label>Start date</label><input id="c-start" type="date"></div>
+    <div class="form-group"><label>Notes</label><textarea id="c-notes" placeholder="Any additional info..."></textarea></div>
+    <button class="btn btn-primary" style="width:100%" onclick="addClient()">Save client</button>
+  </div>
+</div>
+
+<!-- Modal: Add Payment -->
+<div class="overlay" id="modal-add-payment">
+  <div class="modal">
+    <div class="modal-title">Log payment <button class="close-btn" onclick="closeModal('add-payment')">&times;</button></div>
+    <div class="form-group"><label>Client</label><select id="p-client"></select></div>
+    <div class="form-row">
+      <div class="form-group"><label>Amount ($)</label><input id="p-amount" type="number" placeholder="225"></div>
+      <div class="form-group"><label>Payment type</label>
+        <select id="p-type"><option>50% deposit</option><option>Remaining balance</option><option>Full payment</option><option>Other</option></select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Payment method</label>
+        <select id="p-method"><option>Zelle</option><option>CashApp</option><option>PayPal</option><option>Bank transfer</option><option>Other</option></select>
+      </div>
+      <div class="form-group"><label>Date received</label><input id="p-date" type="date"></div>
+    </div>
+    <div class="form-group"><label>Notes</label><input id="p-notes" placeholder="e.g. April deposit"></div>
+    <button class="btn btn-primary" style="width:100%" onclick="addPayment()">Save payment</button>
+  </div>
+</div>
+
+<!-- Modal: View Client -->
+<div class="overlay" id="modal-view-client">
+  <div class="modal">
+    <div class="modal-title"><span id="vc-name">Client</span><button class="close-btn" onclick="closeModal('view-client')">&times;</button></div>
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('info',this)">Info</button>
+      <button class="tab" onclick="showTab('history',this)">Payments</button>
+      <button class="tab" onclick="showTab('notes',this)">Notes</button>
+    </div>
+    <div id="tab-info" class="tab-section active"></div>
+    <div id="tab-history" class="tab-section"></div>
+    <div id="tab-notes" class="tab-section"></div>
+  </div>
+</div>
+
+<script>
+let state = {clients:[],payments:[],onboarding:{}};
+let activeClient = null;
+
+const STEPS = ['Contract sent','Contract signed','50% deposit received','Account access granted','Brand assets received','Strategy call completed','First post published','Fully onboarded'];
+
+function load(){
+  try{const d=localStorage.getItem('llm-hub');if(d)state=JSON.parse(d);}catch(e){}
+  render();
+}
+
+function save(){try{localStorage.setItem('llm-hub',JSON.stringify(state));}catch(e){}}
+
+function initials(n){return n.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2);}
+function fmt$(n){return '$'+Number(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function fmtDate(d){if(!d)return '';return new Date(d+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});}
+function today(){return new Date().toISOString().split('T')[0];}
+
+function showPage(id,el){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  el.classList.add('active');
+  if(id==='onboarding') fillOnboardSelect();
+  if(id==='dashboard') renderDashboard();
+}
+
+function openModal(id){
+  if(id==='add-payment'){
+    document.getElementById('p-client').innerHTML=state.clients.map(c=>`<option value="${c.id}">${c.name}</option>`).join('');
+    document.getElementById('p-date').value=today();
+  }
+  if(id==='add-client') document.getElementById('c-start').value=today();
+  document.getElementById('modal-'+id).classList.add('open');
+}
+function closeModal(id){document.getElementById('modal-'+id).classList.remove('open');}
+
+function showTab(id,el){
+  document.querySelectorAll('.tab-section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  el.classList.add('active');
+  if(id==='history') renderClientHistory();
+  if(id==='notes') renderClientNotes();
+}
+
+function addClient(){
+  const name=document.getElementById('c-name').value.trim();
+  if(!name)return;
+  const c={id:Date.now().toString(),name,biz:document.getElementById('c-biz').value.trim(),email:document.getElementById('c-email').value.trim(),phone:document.getElementById('c-phone').value.trim(),services:document.getElementById('c-services').value.trim(),rate:parseFloat(document.getElementById('c-rate').value)||0,payMethod:document.getElementById('c-paymethod').value,start:document.getElementById('c-start').value,notes:document.getElementById('c-notes').value.trim(),status:'active'};
+  state.clients.push(c);
+  state.onboarding[c.id]=Array(STEPS.length).fill(false);
+  save();closeModal('add-client');
+  ['c-name','c-biz','c-email','c-phone','c-services','c-rate','c-notes'].forEach(id=>document.getElementById(id).value='');
+  render();
+}
+
+function addPayment(){
+  const cid=document.getElementById('p-client').value;
+  const amt=parseFloat(document.getElementById('p-amount').value);
+  if(!cid||!amt)return;
+  const p={id:Date.now().toString(),clientId:cid,amount:amt,type:document.getElementById('p-type').value,method:document.getElementById('p-method').value,date:document.getElementById('p-date').value||today(),notes:document.getElementById('p-notes').value.trim()};
+  state.payments.push(p);
+  save();closeModal('add-payment');
+  document.getElementById('p-amount').value='';document.getElementById('p-notes').value='';
+  render();
+}
+
+function viewClient(id){
+  activeClient=state.clients.find(c=>c.id===id);
+  if(!activeClient)return;
+  document.getElementById('vc-name').textContent=activeClient.name;
+  renderClientInfo();renderClientHistory();renderClientNotes();
+  document.querySelectorAll('.tab-section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-info').classList.add('active');
+  document.querySelectorAll('.tab')[0].classList.add('active');
+  openModal('view-client');
+}
+
+function renderClientInfo(){
+  if(!activeClient)return;
+  const c=activeClient;
+  const paid=state.payments.filter(p=>p.clientId===c.id).reduce((s,p)=>s+p.amount,0);
+  document.getElementById('tab-info').innerHTML=`
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px">
+      <div class="avatar" style="width:46px;height:46px;font-size:14px">${initials(c.name)}</div>
+      <div><div style="font-weight:600;font-size:15px">${c.name}</div><div style="font-size:12px;color:var(--muted)">${c.biz||''}</div></div>
+      <span class="badge badge-active" style="margin-left:auto"><span class="dot"></span>Active</span>
+    </div>
+    <table style="width:100%;font-size:13px;border-collapse:collapse">
+      ${c.email?`<tr><td style="color:var(--muted);padding:6px 0;width:100px">Email</td><td>${c.email}</td></tr>`:''}
+      ${c.phone?`<tr><td style="color:var(--muted);padding:6px 0">Phone</td><td>${c.phone}</td></tr>`:''}
+      ${c.services?`<tr><td style="color:var(--muted);padding:6px 0">Services</td><td>${c.services}</td></tr>`:''}
+      <tr><td style="color:var(--muted);padding:6px 0">Retainer</td><td style="font-family:'DM Mono',monospace;color:var(--green)">${fmt$(c.rate)}/mo</td></tr>
+      <tr><td style="color:var(--muted);padding:6px 0">Pay via</td><td>${c.payMethod||'—'}</td></tr>
+      ${c.start?`<tr><td style="color:var(--muted);padding:6px 0">Started</td><td>${fmtDate(c.start)}</td></tr>`:''}
+      <tr><td style="color:var(--muted);padding:6px 0">Total paid</td><td style="font-family:'DM Mono',monospace;color:var(--green);font-weight:600">${fmt$(paid)}</td></tr>
+    </table>
+  `;
+}
+
+function renderClientHistory(){
+  if(!activeClient)return;
+  const pays=state.payments.filter(p=>p.clientId===activeClient.id).sort((a,b)=>b.date.localeCompare(a.date));
+  const el=document.getElementById('tab-history');
+  if(!pays.length){el.innerHTML='<div class="empty">No payments yet</div>';return;}
+  el.innerHTML=pays.map(p=>`<div class="activity-row"><div><div style="font-weight:500">${p.type}</div><div style="font-size:11px;color:var(--muted)">${p.method} · ${fmtDate(p.date)}${p.notes?' · '+p.notes:''}</div></div><div style="font-family:'DM Mono',monospace;color:var(--green)">${fmt$(p.amount)}</div></div>`).join('');
+}
+
+function renderClientNotes(){
+  if(!activeClient)return;
+  document.getElementById('tab-notes').innerHTML=`
+    <div class="form-group"><label>Notes</label><textarea id="note-field" style="min-height:120px">${activeClient.notes||''}</textarea></div>
+    <button class="btn btn-primary" style="width:100%" onclick="saveClientNote()">Save notes</button>
+  `;
+}
+
+function saveClientNote(){
+  if(!activeClient)return;
+  const val=document.getElementById('note-field').value;
+  activeClient.notes=val;
+  const i=state.clients.findIndex(c=>c.id===activeClient.id);
+  if(i>=0)state.clients[i].notes=val;
+  save();
+  const btn=event.target;btn.textContent='Saved!';setTimeout(()=>btn.textContent='Save notes',1500);
+}
+
+function fillOnboardSelect(){
+  const sel=document.getElementById('onboard-select');
+  const cur=sel.value;
+  sel.innerHTML='<option value="">— choose a client —</option>'+state.clients.map(c=>`<option value="${c.id}"${c.id===cur?' selected':''}>${c.name}${c.biz?' — '+c.biz:''}</option>`).join('');
+  if(cur)renderOnboarding();
+}
+
+function renderOnboarding(){
+  const cid=document.getElementById('onboard-select').value;
+  const el=document.getElementById('onboard-body');
+  if(!cid){el.innerHTML='<div class="empty">Select a client above</div>';return;}
+  if(!state.onboarding[cid])state.onboarding[cid]=Array(STEPS.length).fill(false);
+  const steps=state.onboarding[cid];
+  const done=steps.filter(Boolean).length;
+  const pct=Math.round(done/STEPS.length*100);
+  el.innerHTML=`
+    <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--muted)"><span>${done} of ${STEPS.length} steps complete</span><span style="font-weight:600;color:var(--text)">${pct}%</span></div>
+    <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
+    <ul class="checklist">${STEPS.map((s,i)=>`
+      <li>
+        <div class="check-box ${steps[i]?'done':''}" onclick="toggleStep('${cid}',${i})">
+          <svg viewBox="0 0 11 9" fill="none" stroke="#0e0e10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4.5l3 3 6-7"/></svg>
         </div>
-    </section>
+        <span style="${steps[i]?'color:var(--muted);text-decoration:line-through':''}">  ${s}</span>
+      </li>`).join('')}
+    </ul>
+  `;
+}
 
-    <section class="problems-section">
-        <div class="section-wrapper">
-            <div class="section-header">
-                <h2 class="section-title">Does This Sound Familiar?</h2>
-                <p class="section-subtitle">You're working hard, but your social media and events aren't delivering the results you need.</p>
-            </div>
-            <div class="problems-grid scroll-reveal">
-                <div class="problem-card">
-                    <span class="problem-icon">💸</span>
-                    <h3>Throwing Money at Ads</h3>
-                    <p>You've spent hundreds (maybe thousands) on Facebook and Instagram ads. The costs keep climbing, but attendance and engagement stay flat. You know there has to be a better way.</p>
-                </div>
-                <div class="problem-card">
-                    <span class="problem-icon">📉</span>
-                    <h3>Inconsistent Social Media</h3>
-                    <p>Your posting schedule is all over the place. When you do post, engagement is minimal. You feel like you're shouting into the void—and honestly, you might be.</p>
-                </div>
-                <div class="problem-card">
-                    <span class="problem-icon">🪑</span>
-                    <h3>Empty Event Seats</h3>
-                    <p>You plan incredible events, but turnout is disappointing. You don't have the budget for expensive promotion, and you're losing money every time. It's frustrating and unsustainable.</p>
-                </div>
-                <div class="problem-card">
-                    <span class="problem-icon">⏰</span>
-                    <h3>No Time or Strategy</h3>
-                    <p>Between running your business and everything else on your plate, social media strategy falls to the bottom of the list. You need help from someone who actually knows what they're doing.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+function toggleStep(cid,i){
+  if(!state.onboarding[cid])state.onboarding[cid]=Array(STEPS.length).fill(false);
+  state.onboarding[cid][i]=!state.onboarding[cid][i];
+  save();renderOnboarding();
+}
 
-    <section class="solution-section" id="solution">
-        <div class="solution-wrapper">
-            <div class="solution-intro scroll-reveal">
-                <h2>Our Organic Growth System</h2>
-                <p>We help businesses fill events and grow their brand using <strong>proven organic strategies</strong>—the same approach that generated 1M+ views and built consistent engagement across campaigns.</p>
-            </div>
-            <div class="approach-grid scroll-reveal">
-                <div class="approach-card">
-                    <div class="approach-num">1</div>
-                    <h3>Strategic Content That Converts</h3>
-                    <p>We create scroll-stopping social media content designed specifically for your audience. No generic posts—just content that drives real engagement and action.</p>
-                </div>
-                <div class="approach-card">
-                    <div class="approach-num">2</div>
-                    <h3>Event Promotion That Fills Seats</h3>
-                    <p>Using organic promotion tactics proven across 1M+ views, we build buzz before, during, and after your events. Your audience will be excited to attend—and they'll tell their friends.</p>
-                </div>
-                <div class="approach-card">
-                    <div class="approach-num">3</div>
-                    <h3>Consistent Growth Without Ads</h3>
-                    <p>We build your organic reach systematically using platforms, hashtags, timing, and engagement strategies that actually work. Sustainable growth that doesn't drain your budget.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+function renderDashboard(){
+  const mrr=state.clients.filter(c=>c.status==='active').reduce((s,c)=>s+c.rate,0);
+  const total=state.payments.reduce((s,p)=>s+p.amount,0);
+  document.getElementById('dash-metrics').innerHTML=`
+    <div class="metric-card"><div class="metric-label">Total clients</div><div class="metric-val accent">${state.clients.length}</div></div>
+    <div class="metric-card"><div class="metric-label">Active clients</div><div class="metric-val">${state.clients.filter(c=>c.status==='active').length}</div></div>
+    <div class="metric-card"><div class="metric-label">Monthly revenue</div><div class="metric-val green">${fmt$(mrr)}</div></div>
+    <div class="metric-card"><div class="metric-label">Total collected</div><div class="metric-val green">${fmt$(total)}</div></div>
+  `;
+  const recent=[...state.payments].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,5);
+  const rEl=document.getElementById('dash-recent');
+  rEl.innerHTML=recent.length?recent.map(p=>{const c=state.clients.find(cl=>cl.id===p.clientId);return`<div class="activity-row"><div><div style="font-weight:500;font-size:13px">${c?c.name:'—'}</div><div style="font-size:11px;color:var(--muted)">${p.type} · ${fmtDate(p.date)}</div></div><div style="font-family:'DM Mono',monospace;color:var(--green);font-size:13px">${fmt$(p.amount)}</div></div>`;}).join(''):'<div class="empty">No payments yet</div>';
+  const uEl=document.getElementById('dash-upcoming');
+  const active=state.clients.filter(c=>c.status==='active'&&c.rate>0);
+  uEl.innerHTML=active.length?active.map(c=>{const due=new Date();due.setDate(1);due.setMonth(due.getMonth()+1);return`<div class="activity-row"><div><div style="font-weight:500;font-size:13px">${c.name}</div><div style="font-size:11px;color:var(--muted)">${c.payMethod||''} · Due ${due.toLocaleDateString('en-US',{month:'short',day:'numeric'})}</div></div><div style="font-family:'DM Mono',monospace;font-size:13px;color:var(--amber)">${fmt$(c.rate)}</div></div>`;}).join(''):'<div class="empty">No upcoming payments</div>';
+}
 
-    <section class="packages-section" id="packages">
-        <div class="packages-wrapper">
-            <div class="section-header scroll-reveal">
-                <h2 class="section-title">Choose Your Package</h2>
-                <p class="section-subtitle">Whether you need social media management, event promotion, or full-service support, we've got you covered.</p>
-            </div>
-            <div class="packages-grid scroll-reveal">
-                <div class="package-card">
-                    <div class="package-name">Starter</div>
-                    <div class="package-price">$650<span>/month</span></div>
-                    <div class="package-desc">Perfect for businesses ready to establish a consistent social media presence and grow organically.</div>
-                    <ul class="package-features">
-                        <li>3 social media platforms managed</li>
-                        <li>8 high-quality posts per month</li>
-                        <li>Basic analytics and reporting</li>
-                        <li>Monthly strategy call</li>
-                        <li>Organic growth strategies</li>
-                    </ul>
-                    <button class="package-btn">Get Started</button>
-                </div>
+function renderClients(){
+  const el=document.getElementById('client-list');
+  document.getElementById('client-count').textContent=state.clients.length+' client'+(state.clients.length!==1?'s':'');
+  el.innerHTML=state.clients.length?state.clients.map(c=>`
+    <div class="client-row">
+      <div class="avatar">${initials(c.name)}</div>
+      <div class="client-meta">
+        <div class="client-name">${c.name}</div>
+        <div class="client-sub">${[c.biz,c.services].filter(Boolean).join(' · ')}</div>
+      </div>
+      <div class="rate-pill">${fmt$(c.rate)}/mo</div>
+      <span class="badge badge-active" style="margin:0 6px"><span class="dot"></span>Active</span>
+      <button class="btn btn-ghost btn-sm" onclick="viewClient('${c.id}')">View</button>
+    </div>
+  `).join(''):'<div class="empty">No clients yet — click Add client to get started</div>';
+}
 
-                <div class="package-card package-featured">
-                    <div class="featured-tag">Most Popular</div>
-                    <div class="package-name">Growth</div>
-                    <div class="package-price">$800-$1,200<span>/month</span></div>
-                    <div class="package-desc">Our most popular package—social media management plus powerful event promotion that fills seats.</div>
-                    <ul class="package-features">
-                        <li>4 social media platforms managed</li>
-                        <li>20 high-quality posts per month</li>
-                        <li>Event promotion campaigns</li>
-                        <li>Bi-weekly strategy check-ins</li>
-                        <li>Advanced analytics and insights</li>
-                        <li>Audience engagement tactics</li>
-                    </ul>
-                    <button class="package-btn">Get Started</button>
-                </div>
+function renderPayments(){
+  const el=document.getElementById('payment-list');
+  const sorted=[...state.payments].sort((a,b)=>b.date.localeCompare(a.date));
+  el.innerHTML=sorted.length?`<table class="data-table"><thead><tr><th>Client</th><th>Type</th><th>Method</th><th>Date</th><th style="text-align:right">Amount</th></tr></thead><tbody>${sorted.map(p=>{const c=state.clients.find(cl=>cl.id===p.clientId);return`<tr><td style="font-weight:500">${c?c.name:'—'}</td><td style="color:var(--muted)">${p.type}</td><td style="color:var(--muted)">${p.method}</td><td style="color:var(--muted)">${fmtDate(p.date)}</td><td class="amount-cell" style="text-align:right">${fmt$(p.amount)}</td></tr>`;}).join('')}</tbody></table>`:'<div class="empty">No payments logged yet</div>';
+}
 
-                <div class="package-card">
-                    <div class="package-name">Premium</div>
-                    <div class="package-price">$1,500-$2,500<span>/event</span></div>
-                    <div class="package-desc">Full-service event planning and promotion—from concept to execution, we handle everything.</div>
-                    <ul class="package-features">
-                        <li>Complete event planning and coordination</li>
-                        <li>Pre, during, and post-event promotion</li>
-                        <li>Vendor coordination and management</li>
-                        <li>Multi-platform promotional campaigns</li>
-                        <li>On-site support during event</li>
-                        <li>Post-event analytics and recap</li>
-                    </ul>
-                    <button class="package-btn">Get Started</button>
-                </div>
-            </div>
-        </div>
-    </section>
+function render(){renderDashboard();renderClients();renderPayments();}
 
-    <section class="cta-banner">
-        <div class="cta-banner-content">
-            <h2>Ready to Fill Your Events & Grow Organically?</h2>
-            <p>Stop wasting money on ads that don't work. Let's build your brand the right way—with organic strategies that deliver real, lasting results.</p>
-            <a href="https://calendly.com/morgannyameye/strategy-call" target="_blank" class="cta-btn">Book Your Free Strategy Call</a>
-        </div>
-    </section>
+document.querySelectorAll('.overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('open');}));
 
-    <footer>
-        <p>&copy; 2019 Morgan Social. Helping brands businesses with structured organic growth strategies.</p>
-    </footer>
-
-    <script>
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Scroll reveal animation
-        const observerOptions = {
-            threshold: 0.15,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.scroll-reveal').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
+load();
+</script>
 </body>
-
 </html>
